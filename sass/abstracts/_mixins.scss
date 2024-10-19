@@ -1,0 +1,29 @@
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% ,-50%);
+
+}
+
+// Media Query Manier
+
+/*
+0 - 600px:           phone
+600px - 900px :      tablet potrate
+900px - 1200px :     tablet landscape
+1200px - 1800px:     is where noraml style apply
+1800px +:            big desktop
+*/
+
+@mixin respond-phone {
+  @media (max-width: 600px) { @content };
+}
